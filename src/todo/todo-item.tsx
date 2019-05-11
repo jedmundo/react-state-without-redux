@@ -1,5 +1,6 @@
 import React, { useContext, FormEvent, useState } from 'react'
 import { StoreContext } from '../context/store-context';
+import { MainTitle } from '../app.styles'
 
 export const TodoItem: React.FunctionComponent = () => {
 
@@ -17,9 +18,12 @@ export const TodoItem: React.FunctionComponent = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" value={text} onChange={(e) => setText(e.currentTarget.value)} />
-      <button type="submit">Add todo !</button>
-    </form>
+    <>
+      <MainTitle> Sync request </MainTitle>
+      <form onSubmit={handleSubmit}>
+        <input type="text" value={text} onChange={(e) => setText(e.currentTarget.value)} />
+        <button type="submit">Add todo !</button>
+      </form>
+    </>
   )
 }
