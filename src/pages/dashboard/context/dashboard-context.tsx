@@ -13,7 +13,7 @@ const DashboardProvider: (bla: any) => JSX.Element = ({ children }) => {
   // Log new state
   useEffect(
     () => {
-      console.log('Local State', { newState: state });
+      console.log('Dashboard State', { newState: state });
     },
     [state]
   );
