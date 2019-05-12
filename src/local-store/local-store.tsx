@@ -3,14 +3,15 @@ import { TodoItem } from './todo/todo-item';
 import { TodoList } from './todo/todo-list'
 import { GithubSearch } from './github/github-search'
 import { GithubRepos } from './github/repos'
+import { StoreProvider } from './context/store-context';
 
 const LocalStore: React.FC = () => (
-    <div>
+    <StoreProvider>
       <TodoItem />
       <TodoList />
       <GithubSearch />
       <GithubRepos />
-    </div>
+    </StoreProvider>
   )
 
 export default LocalStore

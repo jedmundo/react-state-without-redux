@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { StoreContext } from '../../context/store-context';
+import { StoreContext } from '../context/store-context';
 
 const mapRepos = (repos: any) => {
   return repos && repos.map((repo: any) => (

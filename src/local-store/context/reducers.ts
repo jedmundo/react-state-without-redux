@@ -14,7 +14,7 @@ const types = {
 };
 
 const reducer = (state = initialState, action: any) => {
-  console.log({ oldState: state, type: action.type, payload: action.payload });
+  console.log('Local State', { oldState: state, type: action.type, payload: action.payload });
   switch (action.type) {
     case types.SET_TECH_LIST:
       return {
