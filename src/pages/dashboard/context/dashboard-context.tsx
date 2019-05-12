@@ -2,9 +2,9 @@ import React, { createContext, useReducer, useEffect } from "react";
 import { reducer, initialState } from "./reducers";
 import { useActions } from "./actions";
 
-const StoreContext = createContext(initialState);
+const DashboardContext = createContext(initialState);
 
-const StoreProvider: (bla: any) => JSX.Element = ({ children }) => {
+const DashboardProvider: (bla: any) => JSX.Element = ({ children }) => {
   // Set up reducer with useReducer and our defined reducer, initialState from reducers.js
   const [state, dispatch] = useReducer<any>(reducer, initialState);
   // Create an object of all our actions, handling special cases where a simple dispatch is too primitive
@@ -22,10 +22,10 @@ const StoreProvider: (bla: any) => JSX.Element = ({ children }) => {
 
   // Render state, dispatch and special case actions
   return (
-    <StoreContext.Provider value={value}>
+    <DashboardContext.Provider value={value}>
       {children}
-    </StoreContext.Provider>
+    </DashboardContext.Provider>
   );
 };
 
-export { StoreContext, StoreProvider };
+export { DashboardContext, DashboardProvider };

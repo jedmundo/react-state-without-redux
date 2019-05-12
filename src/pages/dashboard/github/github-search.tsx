@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { StoreContext } from "../context/store-context";
+import { DashboardContext } from "../context/dashboard-context";
 import { MainTitle } from '../../../app.styles'
 
 export const GithubSearch: React.FC = () => {
 
-  const { actions } = useContext<any>(StoreContext);
+  const { actions } = useContext<any>(DashboardContext);
 
   const searchSubmit = async (e: any) => {
     e.preventDefault();

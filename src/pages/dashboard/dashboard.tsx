@@ -3,15 +3,15 @@ import { TodoItem } from './todo/todo-item';
 import { TodoList } from './todo/todo-list'
 import { GithubSearch } from './github/github-search'
 import { GithubRepos } from './github/repos'
-import { StoreProvider } from './context/store-context';
+import { DashboardProvider } from './context/dashboard-context';
 
 const Dashboard: React.FC = () => (
-    <StoreProvider>
+    <DashboardProvider>
       <TodoItem />
       <TodoList />
       <GithubSearch />
       <GithubRepos />
-    </StoreProvider>
+    </DashboardProvider>
   )
 
 export default Dashboard

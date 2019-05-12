@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { StoreContext } from '../context/store-context';
+import { DashboardContext } from '../context/dashboard-context';
 
 const mapRepos = (repos: any) => {
   return repos && repos.map((repo: any) => (
@@ -15,7 +15,7 @@ const mapRepos = (repos: any) => {
 };
 
 export const GithubRepos: React.FC = () => {
-  const { state } = useContext<any>(StoreContext);
+  const { state } = useContext<any>(DashboardContext);
   return (
     <>
       {state.isLoading && <h4>Loading...</h4>}

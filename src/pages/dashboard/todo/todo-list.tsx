@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
-import { StoreContext } from '../context/store-context';
+import { DashboardContext } from '../context/dashboard-context';
 
 export const TodoList: React.FC = () => {
 
-  const { actions } = useContext<any>(StoreContext);
+  const { actions } = useContext<any>(DashboardContext);
 
   const todos = actions.getTodos()
 
