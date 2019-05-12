@@ -1,11 +1,12 @@
-import React, { createContext, useReducer, useEffect } from "react";
-import { reducer, initialState } from "./reducers";
-import { useActions } from "./actions";
+import React, { createContext, useReducer, useEffect } from 'react';
+
+import { reducer, initialState } from './reducers'
+import { useActions } from './actions';
 
 const DashboardContext = createContext(initialState);
 
-const DashboardProvider: (bla: any) => JSX.Element = ({ children }) => {
-  const [state, dispatch] = useReducer<any>(reducer, initialState);
+const DashboardProvider: (param: { children: JSX.Element }) => JSX.Element = ({ children }) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
   const actions = useActions(state, dispatch);
 
   // Log new state

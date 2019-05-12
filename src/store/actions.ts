@@ -1,5 +1,9 @@
 import { types } from './reducers'
 
+export interface GlobalState {
+  username: string
+}
+
 export const useActions = (state: any, dispatch: any) => {
 
   function setUsername(username: string) {
