@@ -1,16 +1,13 @@
-import { GlobalAction } from './actions.model'
+import { GlobalAction, GlobalActionType } from './actions.model'
+
 const initialState = {
   username: 'John Doe'
-};
-
-const types = {
-  ADD_USERNAME: "ADD_USERNAME",
 };
 
 const reducer = (state = initialState, action: GlobalAction) => {
   console.log('Global State:', { oldState: state, type: action.type });
   switch (action.type) {
-    case types.ADD_USERNAME:
+    case GlobalActionType.SET_USERNAME:
       return {
         ...state,
         username: action.payload
@@ -19,4 +16,4 @@ const reducer = (state = initialState, action: GlobalAction) => {
       throw new Error("Unexpected action");
   }
 };
-export { initialState, types, reducer };
+export { initialState, reducer };
