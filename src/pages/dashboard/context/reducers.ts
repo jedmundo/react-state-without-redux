@@ -15,7 +15,7 @@ export const initialState: DashboardState = {
   ],
   isLoading: false,
   notFound: false,
-  repos: []
+  repos: [],
 };
 
 export const reducer = (state = initialState, action: DashboardAction) => {
@@ -47,6 +47,7 @@ export const reducer = (state = initialState, action: DashboardAction) => {
         ...state,
         isLoading: false,
         notFound: true,
+        repos: []
       };
     default:
       throw new Error('Unexpected action');
