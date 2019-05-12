@@ -12,7 +12,7 @@ const Login: React.FC = () => {
 
   return (
     <div>
-      <p>Im going to change the global state of the application</p>
+      <p>Im going to change the global state of the application (see console logs)</p>
       <button onClick={() => updateUsername()}>Login with {name}</button>
     </div>
   )
