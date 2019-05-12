@@ -1,4 +1,5 @@
-import React, { useContext } from "react";
+import React, { useContext, FormEvent } from "react";
+
 import { DashboardContext } from "../context/dashboard-context";
 import { MainTitle } from '../../../app.styles'
 
@@ -6,9 +7,9 @@ export const GithubSearch: React.FC = () => {
 
   const { actions } = useContext<any>(DashboardContext);
 
-  const searchSubmit = async (e: any) => {
-    e.preventDefault();
-    const username = e.target.username.value;
+  const searchSubmit = async (event: any) => {
+    event.preventDefault();
+    const username = event.target.username.value;
     await actions.searchGithub(username);
   };
 

@@ -7,13 +7,13 @@ export const TodoItem: React.FunctionComponent = () => {
   const { actions } = useContext<any>(DashboardContext);
   const [text, setText] = useState('');
 
-  const handleSubmit = (e: FormEvent<any>) => {
-    e.preventDefault();
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     if (!text.trim()) {
       return;
     }
 
-    actions.addTechIfNotInList(text)
+    actions.addTodo(text)
     setText('')
   }
 

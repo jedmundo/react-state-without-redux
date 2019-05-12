@@ -1,8 +1,9 @@
 import React, { useContext } from 'react'
 import { DashboardContext } from '../context/dashboard-context';
+import { GithubRepository } from './repos.model'
 
-const mapRepos = (repos: any) => {
-  return repos && repos.map((repo: any) => (
+const mapRepos = (repos: GithubRepository[]) => {
+  return repos && repos.map((repo: GithubRepository) => (
     <a
       key={repo.id}
       href={repo.html_url}

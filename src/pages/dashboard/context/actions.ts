@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'axios'
 
 import { DashboardState } from './reducers'
 import { DashboardActionType, DashboardAction } from './actions.model'
