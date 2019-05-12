@@ -3,7 +3,7 @@ import { GlobalContext } from '../../store/global-context';
 
 const Login: React.FC = () => {
 
-  const { actions } = useContext<any>(GlobalContext);
+  const { actions } = useContext(GlobalContext);
   const name = 'Alexander Dumas'
 
   const updateUsername = () => {

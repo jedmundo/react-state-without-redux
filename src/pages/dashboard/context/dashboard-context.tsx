@@ -3,7 +3,14 @@ import React, { createContext, useReducer, useEffect } from 'react';
 import { reducer, initialState } from './reducers'
 import { useActions } from './actions';
 
-const DashboardContext = createContext(initialState);
+const DashboardContext = createContext({
+  actions: {
+    getTodos: () => [],
+    addTodo: (todo: string) => { },
+    searchGithub: (search: string) => Promise,
+  },
+  state: initialState,
+});
 
 const DashboardProvider: (param: { children: JSX.Element }) => JSX.Element = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);

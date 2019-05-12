@@ -27,7 +27,7 @@ const Navigation = styled.nav({
 
 export const Routes: React.FC = () => {
 
-  const { state } = useContext<any>(GlobalContext);
+  const { state } = useContext(GlobalContext);
 
   return (
     <Router>

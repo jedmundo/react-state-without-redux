@@ -16,7 +16,7 @@ const mapRepos = (repos: GithubRepository[]) => {
 };
 
 export const GithubRepos: React.FC = () => {
-  const { state } = useContext<any>(DashboardContext);
+  const { state } = useContext(DashboardContext);
   return (
     <>
       {state.isLoading && <h4>Loading...</h4>}

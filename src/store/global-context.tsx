@@ -3,7 +3,12 @@ import React, { createContext, useReducer, useEffect } from 'react';
 import { reducer, initialState } from './reducers';
 import { useActions } from './actions'
 
-const GlobalContext = createContext(initialState);
+const GlobalContext = createContext({
+  state: initialState,
+  actions: {
+    setUsername: (username: string) => {},
+  }
+});
 
 const GlobalProvider: (param: { children: JSX.Element }) => JSX.Element = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);

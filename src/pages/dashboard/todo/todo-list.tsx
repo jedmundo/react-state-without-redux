@@ -3,7 +3,7 @@ import { DashboardContext } from '../context/dashboard-context'
 
 export const TodoList: React.FC = () => {
 
-  const { actions } = useContext<any>(DashboardContext);
+  const { actions } = useContext(DashboardContext);
 
   const todos = actions.getTodos()
 

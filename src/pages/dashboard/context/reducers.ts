@@ -1,9 +1,11 @@
 import { DashboardAction, DashboardActionType } from './actions.model'
+import { GithubRepository } from '../github/repos.model'
 
 export interface DashboardState {
   todoList: string[]
   isLoading: boolean
   notFound: boolean
+  repos: GithubRepository[]
 }
 
 export const initialState: DashboardState = {
@@ -13,6 +15,7 @@ export const initialState: DashboardState = {
   ],
   isLoading: false,
   notFound: false,
+  repos: []
 };
 
 export const reducer = (state = initialState, action: DashboardAction) => {

@@ -1,10 +1,11 @@
 import React, { useContext, FormEvent, useState } from 'react'
-import { DashboardContext } from '../context/dashboard-context';
+
+import { DashboardContext } from '../context/dashboard-context'
 import { MainTitle } from '../../../app.styles'
 
 export const TodoItem: React.FunctionComponent = () => {
 
-  const { actions } = useContext<any>(DashboardContext);
+  const { actions } = useContext(DashboardContext);
   const [text, setText] = useState('');
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
