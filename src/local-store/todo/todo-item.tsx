@@ -1,6 +1,6 @@
 import React, { useContext, FormEvent, useState } from 'react'
-import { StoreContext } from '../context/store-context';
-import { MainTitle } from '../app.styles'
+import { StoreContext } from '../../context/store-context';
+import { MainTitle } from '../../app.styles'
 
 export const TodoItem: React.FunctionComponent = () => {
 
