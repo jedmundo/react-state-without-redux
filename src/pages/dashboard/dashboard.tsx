@@ -5,7 +5,7 @@ import { GithubSearch } from './github/github-search'
 import { GithubRepos } from './github/repos'
 import { StoreProvider } from './context/store-context';
 
-const LocalStore: React.FC = () => (
+const Dashboard: React.FC = () => (
     <StoreProvider>
       <TodoItem />
       <TodoList />
@@ -14,4 +14,4 @@ const LocalStore: React.FC = () => (
     </StoreProvider>
   )
 
-export default LocalStore
+export default Dashboard

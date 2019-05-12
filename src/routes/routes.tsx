@@ -9,19 +9,19 @@ import styled from 'styled-components'
 
 import { async } from './async-component'
 import { NotFound } from './not-found'
-import { GlobalContext } from '../global-context/global-context'
+import { GlobalContext } from '../store/global-context'
 
-const Home = async(() => import(/*webpackChunkName:'home'*/ '../home/home').then(module => module.default))
-const Login = async(() => import(/*webpackChunkName:'login'*/ '../login/login').then(module => module.default))
-const LocalStore = async(() => import(/*webpackChunkName:'local-store'*/ '../local-store/local-store').then(module => module.default))
+const Home = async(() => import(/*webpackChunkName:'home'*/ '../pages/home/home').then(module => module.default))
+const Login = async(() => import(/*webpackChunkName:'login'*/ '../pages/login/login').then(module => module.default))
+const Dashboard = async(() => import(/*webpackChunkName:'dashboard'*/ '../pages/dashboard/dashboard').then(module => module.default))
 
 const Navigation = styled.nav({
-  // backgroundColor: 'lightgrey',
+  backgroundColor: 'lightblue',
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  a: {
-    marginRight: 20,
+  'a, p': {
+    margin: 20,
   }
 })
 
@@ -38,8 +38,8 @@ export const Routes: React.FC = () => {
               <span>Home</span>
             </Link>
 
-            <Link to="/local-store">
-              <span>Shared local redux store</span>
+            <Link to="/dashboard">
+              <span>Dashboard</span>
             </Link>
 
             <Link to="/login">
@@ -53,7 +53,7 @@ export const Routes: React.FC = () => {
         <section>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/local-store" component={LocalStore} />
+            <Route path="/dashboard" component={Dashboard} />
             <Route path="/login" component={Login} />
             <Route path="*" component={NotFound} />
           </Switch>

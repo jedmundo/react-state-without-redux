@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes } from './routes/routes'
-import { GlobalProvider } from './global-context/global-context';
+import { GlobalProvider } from './store/global-context';
 
 const App: React.FC = () => {
   return (

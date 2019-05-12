@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { GlobalContext } from '../global-context/global-context';
+import { GlobalContext } from '../../store/global-context';
 
 const Login: React.FC = () => {
 
