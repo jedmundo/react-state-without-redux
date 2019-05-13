@@ -4,7 +4,7 @@ In my view, the redux pattern is a really good solution but should only be appli
 
 This project shows an example of how you can setup a local context/store/state for scenarios where components need to exchange data without having to use `react-redux`. I even added a global state if you really need to have a shared state between all components in your project.
 
-This implementation was done only using `React's Context API + Hooks` for setting up the redux stores and `async/await` + `Axios` to deal with async requests.
+This implementation was based [on this article](https://itnext.io/replace-redux-state-with-react-hooks-and-context-7906e0fd5521)  and was done only using `React's Context API + Hooks` for setting up the redux stores and `async/await` + `Axios` to deal with async requests.
 
 Technologies used: `React, React router, Styled-Components, Axios,Typescript`
 
