@@ -1,6 +1,6 @@
 ## Why this project was created
 
-In my view, the redux pattern is a really good solution but should only be applied in particular scenarios where the same data needs to be updated in alot of different components in various levels of the component hierarchy, and not for the whole application as it adds unecessary complexity.
+In my view, the redux pattern is a really good solution but could only be applied in particular scenarios where the same data needs to be updated in alot of different components in various levels of the component hierarchy, and not for the whole application as it might add complexity.
 
 This project shows an example of how you can setup a local context/store/state for scenarios where components need to exchange data without having to use `react-redux`. I even added a global state if you really need to have a shared state between all components in your project.
 
